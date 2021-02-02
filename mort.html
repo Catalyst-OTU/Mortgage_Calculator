@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Mortgage</title>
+    <script>
+        function showMe(){
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1">Mortgage Calculator</h1>
+
+        <div class="row">
+            <div class="col">
+                <div class="card jumbotron">
+                    <ul class="d-flex">
+                        <img src="img/(1).jpg" width="100" height="100" alt="" id="house1">
+                        <img src="img/(2).jpg" width="100" height="100" alt="" id="house3">
+                        <img src="img/(3).jpg" width="100" height="100" alt="" id="house4">
+                        <img src="img/(4).jpg" width="100" height="100" alt="" id="house5">
+                        <img src="img/(6).jpg" width="100" height="100" alt="" id="house6">
+                    </ul>
+                    <ul class="d-flex";>    
+                        <img src="img/(7).jpg" width="100" height="100" alt="" id="house7">
+                        <img src="img/(8).jpg" width="100" height="100" alt="" id="house8">
+                        <img src="img/(9).jpg" width="100" height="100" alt="" id="house9">
+                        <img src="img/(24).jpg" width="100" height="100" alt="" id="house10">
+                        <img src="img/(11).jpg" width="100" height="100" alt="" id="house11">
+                    </ul>
+                    <div class="container">
+                        <span onclick="show.parentElement.style.display='none'" class="closebtn">Empty space</span>
+                        <img id src="" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="card jumbotron">
+                    <p><b>Cost of House</b>: <input type="text" id="inCost"/></p>
+                    <p><b>Down Payment</b>: <input type="text" id="inDown"/></p>
+                    <p><b>APR (Interest)</b>: <input type="text" id="inAPR"/></p>
+                    <p><b>Period (How long)</b>: <input type="text" id="inPeriod"/></p>
+                    <p><button id="btnCalculator">
+                        Calculate Payments
+                        </button></p>
+                    <p><b>Total Monthly Payment: <spam id="outMonthly"></spam> </b></p>
+                    <p id="showMe"></p>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        
+            
+    <script src="mortgage-calc.js"></script>
+    </div>
+
+</body>
+</html>

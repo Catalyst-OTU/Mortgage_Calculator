@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Mortgage Calculator</title>
+    <script>
+        function displayMe(){
+            var a = document.getElementById('house1').value;
+            document.getElementById('amount').value = a;
+            var interest_rate = document.getElementById('interest_rate').value;
+            var months = document.getElementById('months').value;
+            var interest = (a * (interest_rate * .01)) / months;
+            //To leave the answer in money format
+            var payment = ((a / months) + interest).toFixed(2);
+            document.getElementById('payment').innerHTML = "Monthly Payment = GHC"+ payment;
+        }
+    </script>
+</head>
+<body style="background-image: url(img/\(20\).jpg);" class="embed-responsive">
+    <div style="text-align: left;">
+        <header><h1><img src="img/grid.jpg" width="600" height="200" alt="picture" class="rounded"></h1></header>
+        <div class="d-flex">
+            <div class="col embed-responsive">
+                <ul class="">
+                    <p style="color: gold; font-size: large; font-weight: bold;">Cost of house: GHC<input type="number" id="house1" value="45000" required/></p>
+                    <input id="amount" type="text" min="1" onblur="displayMe()" disabled>
+                <p style="color: gold; font-size: large; font-weight: bold;">Interest Rate: <input id="interest_rate" type="number" min="0" max="100" value="5" step=".1" onblur="displayMe()" required/>%</p>
+                <p style="color: gold; font-size: large; font-weight: bold;">Months: <input id="months" type="number" min="1" value="12" step="1" onblur="displayMe()" required/></p> 
+                <button onclick="displayMe()">Calculate</button>
+            </ul>
+            </div>
+            <div class="col">
+                <div class="card bg-transparent border-0">
+                    <h2 style="color: gold; font-size: xx-large; font-weight: bold;" id="payment"></h2>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

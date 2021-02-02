@@ -1,0 +1,9 @@
+.container{
+    width: 400px;
+    height: 450px;
+    background-color: cadetblue;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: crimson;
+}
